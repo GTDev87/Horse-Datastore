@@ -12,3 +12,15 @@ Installing Modules:
 
   To install all project modules use:
     npm install
+
+Testing:
+  To add test framework to commandline:
+    npm install -g mocha
+    npm install -g chai
+  To run tests:
+    (At project root) 
+    mocha --compilers coffee:coffee-script
+    To run test with build:
+      mocha --compilers coffee:coffee-script -w
+    
+    
