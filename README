@@ -1,0 +1,4 @@
+to locally install mongodb:
+npm install mongodb
+globally:
+npm install -g mongodb
