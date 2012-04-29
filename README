@@ -1,9 +1,14 @@
-to install nodejs mongodb module:
-locally:
-  npm install mongodb
-globally:
-  npm install -g mongodb
+To Start Server:
+  ./server
 
-lets commit to two space tab for indentation
+Practices:
+  lets commit to two space tab for indentation
 
-We won't be including data inside node_modules.  But we will list all of the modules we are including
+Installing Modules:
+  To install modules use: 
+    npm install <module name> --save
+  REMEMBER ALWAYS USE --save
+  The modules will be installed to ./node_modlues which will be not included in the repository
+
+  To install all project modules use:
+    npm install
