@@ -1,4 +1,9 @@
-to locally install mongodb:
-npm install mongodb
+to install nodejs mongodb module:
+locally:
+  npm install mongodb
 globally:
-npm install -g mongodb
+  npm install -g mongodb
+
+lets commit to two space tab for indentation
+
+We won't be including data inside node_modules.  But we will list all of the modules we are including
