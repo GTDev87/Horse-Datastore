@@ -1,5 +1,5 @@
 {
-  "name": "Horse-DataStore",
+  "name": "Horse-Datastore",
   "version": "0.0.1",
   "dependencies": {
     "mongodb": "~1.0.0",
