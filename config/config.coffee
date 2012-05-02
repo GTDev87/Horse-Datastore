@@ -1,4 +1,3 @@
-#Set the current environment to true in the env object
 currentEnv = process.env.NODE_ENV or 'production'
 exports.appName = "Horse Datastore"
 
