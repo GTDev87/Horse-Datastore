@@ -1,3 +1,5 @@
+config = require('./config')
+
 module.exports = (app, express, RedisStore) ->
   app.configure ->
     app.use(express.methodOverride())
@@ -9,8 +11,8 @@ module.exports = (app, express, RedisStore) ->
     app.use(express.errorHandler({ dumpExceptions: true, showStack: true }))
     app.use(
       express.session(
-        secret: "secretkey" 
-        store: new RedisStore(db: "horse_datastore_test")
+        secret: config.secret
+        store: new RedisStore(db: config.db.test.name)
       )
     )
 
@@ -20,7 +22,7 @@ module.exports = (app, express, RedisStore) ->
     app.use(express.errorHandler())
     app.use(
       express.session(
-        secret: "secretkey" 
-        store: new RedisStore(db: "horse_datastore")
+        secret: config.secret 
+        store: new RedisStore(db: config.db.test.name)
       )
     )
