@@ -1,5 +1,5 @@
 To Start Server:
-  ./server
+  make server
 
 Practices:
   lets commit to two space tab for indentation
@@ -14,13 +14,12 @@ Installing Modules:
     npm install
 
 Testing:
-  To add test framework to commandline:
-    npm install -g mocha
-    npm install -g chai
-  To run tests:
-    (At project root) 
-    mocha --compilers coffee:coffee-script
-    To run test with build:
-      mocha --compilers coffee:coffee-script -w
+  To run unit tests:
+    make unit OR
+    make test
+  to run acceptance tests:
+    make features
+  to run tests in a specific folder:
+    make test FOLDER=test/folder
     
     

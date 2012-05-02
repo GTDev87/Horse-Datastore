@@ -4,26 +4,33 @@ COMPILE_TYPE = coffee
 UNIT_TESTS = test/*.$(COMPILE_TYPE)
 ACCEPTANCE_TESTS = features/*.$(COMPILE_TYPE)
 COFFEE_COMPILER = $(COMPILE_TYPE):coffee-script
+FOLDER = test
 
-test-unit:
+test:
+	$(MOCHA) \
+	--reporter $(REPORTER) \
+	--compilers $(COFFEE_COMPILER) \
+	./$(FOLDER)/*
+
+unit:
 	$(MOCHA) \
 	--reporter $(REPORTER) \
 	--compilers $(COFFEE_COMPILER) \
 	$(UNIT_TESTS)
       
-test-unit-watch:
+unit-watch:
 	$(MOCHA) \
 	--reporter $(REPORTER) \
 	--compilers $(COFFEE_COMPILER) \
 	$(UNIT_TESTS)
 
-test-acceptance:
+features:
 	$(MOCHA) \
 	--reporter $(REPORTER) \
 	--compilers $(COFFEE_COMPILER) \
 	$(ACCEPTANCE_TESTS)
 
-run:
+server:
 	coffee lib/server.$(COMPILE_TYPE)
 
-.PHONY: test-unit test-acceptance test-unit-watch run
+.PHONY: test unit features unit-watch server
