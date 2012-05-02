@@ -7,30 +7,35 @@ COFFEE_COMPILER = $(COMPILE_TYPE):coffee-script
 FOLDER = test
 
 test:
+	NODE_ENV=test
 	$(MOCHA) \
 	--reporter $(REPORTER) \
 	--compilers $(COFFEE_COMPILER) \
 	./$(FOLDER)/*
 
 unit:
+	NODE_ENV=test
 	$(MOCHA) \
 	--reporter $(REPORTER) \
 	--compilers $(COFFEE_COMPILER) \
 	$(UNIT_TESTS)
       
 unit-watch:
+	NODE_ENV=test
 	$(MOCHA) \
 	--reporter $(REPORTER) \
 	--compilers $(COFFEE_COMPILER) \
 	$(UNIT_TESTS)
 
 features:
+	NODE_ENV=test
 	$(MOCHA) \
 	--reporter $(REPORTER) \
 	--compilers $(COFFEE_COMPILER) \
 	$(ACCEPTANCE_TESTS)
 
 server:
+	NODE_ENV=production
 	coffee lib/server.$(COMPILE_TYPE)
 
 .PHONY: test unit features unit-watch server

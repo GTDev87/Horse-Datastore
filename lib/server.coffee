@@ -1,18 +1,44 @@
-redis = require("redis")
-client = redis.createClient()
+express = require('express')
 
-client.on("error",(err) ->
-  console.log("Error " + err)
+RedisStore = require('connect-redis')(express)
+
+app = express.createServer()
+
+app.configure( ->
+    app.use(express.methodOverride())
+    app.use(express.bodyParser())
+    app.use(app.router)
 )
 
-client.set("string key", "string val", redis.print)
-client.hset("hash key", "hashtest 1", "some value", redis.print)
-client.hset(["hash key", "hashtest 2", "some other value"], redis.print)
-
-client.hkeys("hash key", (err, replies) ->
-  console.log(replies.length + " replies:")
-  replies.forEach( (reply, i) ->
-    console.log("    " + i + ": " + reply)
+app.configure('test', ->
+  app.use(express.static(__dirname + '/public'))
+  app.use(express.errorHandler({ dumpExceptions: true, showStack: true }))
+  app.use(
+    express.session(
+      secret: "secretkey" 
+      store: new RedisStore(
+        db: "horse_datastore_test"
+      )
     )
-  client.quit()
+  )
 )
+
+app.configure('production', ->
+  oneYear = 31557600000
+  app.use(express.static(__dirname + '/public', { maxAge: oneYear }))
+  app.use(express.errorHandler())
+  app.use(
+    express.session(
+      secret: "secretkey" 
+      store: new RedisStore(
+        db: "horse_datastore_prod"
+      )
+    )
+  )
+)
+
+app.get('/', (req, res) ->
+  res.send('hello world')
+)
+
+app.listen(3000)
