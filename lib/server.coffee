@@ -5,9 +5,9 @@ RedisStore = require('connect-redis')(express)
 app = express.createServer()
 
 app.configure( ->
-    app.use(express.methodOverride())
-    app.use(express.bodyParser())
-    app.use(app.router)
+  app.use(express.methodOverride())
+  app.use(express.bodyParser())
+  app.use(app.router)
 )
 
 app.configure('test', ->
@@ -16,9 +16,7 @@ app.configure('test', ->
   app.use(
     express.session(
       secret: "secretkey" 
-      store: new RedisStore(
-        db: "horse_datastore_test"
-      )
+      store: new RedisStore(db: "horse_datastore_test")
     )
   )
 )
@@ -30,9 +28,7 @@ app.configure('production', ->
   app.use(
     express.session(
       secret: "secretkey" 
-      store: new RedisStore(
-        db: "horse_datastore_prod"
-      )
+      store: new RedisStore(db: "horse_datastore")
     )
   )
 )
