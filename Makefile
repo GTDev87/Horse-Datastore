@@ -36,6 +36,6 @@ features:
 
 server:
 	NODE_ENV=production
-	coffee lib/server.$(COMPILE_TYPE)
+	coffee ./config/app.$(COMPILE_TYPE)
 
 .PHONY: test unit features unit-watch server
