@@ -6,6 +6,9 @@ ACCEPTANCE_TESTS = features/*.$(COMPILE_TYPE)
 COFFEE_COMPILER = $(COMPILE_TYPE):coffee-script
 FOLDER = test
 
+setup:
+	npm install
+
 test:
 	NODE_ENV=test
 	$(MOCHA) \
@@ -38,4 +41,4 @@ server:
 	NODE_ENV=production
 	coffee ./config/app.$(COMPILE_TYPE)
 
-.PHONY: test unit features unit-watch server
+.PHONY: test unit features unit-watch server setup

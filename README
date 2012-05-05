@@ -11,7 +11,7 @@ Installing Modules:
   The modules will be installed to ./node_modlues which will be not included in the repository
 
   To install all project modules use:
-    npm install
+    make setup
 
 Testing:
   To run unit tests:
