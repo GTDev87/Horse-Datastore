@@ -5,6 +5,7 @@ UNIT_TESTS = test/*.$(COMPILE_TYPE)
 ACCEPTANCE_TESTS = features/*.$(COMPILE_TYPE)
 COFFEE_COMPILER = $(COMPILE_TYPE):coffee-script
 FOLDER = test
+COMPILER_LOCATION = ./node_modules/coffee-script/bin/coffee
 
 setup:
 	npm install
@@ -39,6 +40,6 @@ features:
 
 server:
 	NODE_ENV=production
-	coffee ./config/app.$(COMPILE_TYPE)
+	$(COMPILER_LOCATION) ./config/app.$(COMPILE_TYPE)
 
 .PHONY: test unit features unit-watch server setup
