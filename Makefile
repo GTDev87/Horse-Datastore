@@ -1,9 +1,10 @@
 MOCHA = ./node_modules/.bin/mocha
 REPORTER = spec
 COMPILE_TYPE = coffee
+COMPILER_MODULE = coffee-script
 UNIT_TESTS = test/*.$(COMPILE_TYPE)
 ACCEPTANCE_TESTS = features/*.$(COMPILE_TYPE)
-COFFEE_COMPILER = $(COMPILE_TYPE):coffee-script
+COFFEE_COMPILER = $(COMPILE_TYPE):$(COMPILER_MODULE)
 FOLDER = test
 COMPILER_LOCATION = ./node_modules/coffee-script/bin/coffee
 
