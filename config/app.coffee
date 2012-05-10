@@ -1,13 +1,11 @@
 define [
   "express", 
-  "connect-redis", 
-  "cs!config/config", 
-  "cs!config/setup", 
+  "cs!config/config",
+  "cs!config/setup_server",
   "cs!config/routes", 
-  "cs!src/server"],(express, ConnectRedis, config, setup, routes, server) ->
+  "cs!src/server"],(express, config, setup_server, routes, server) ->
     
-  RedisStore = new ConnectRedis(express)
   app = express.createServer()
-  setup.initialize(app, express, RedisStore)
+  setup_server.initialize(app)
   routes.initialize(app)
   app.listen(config.server.port)

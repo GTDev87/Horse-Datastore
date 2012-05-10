@@ -1,5 +1,9 @@
-define ["cs!config/config"], (config) -> 
-  initialize: (app, express, RedisStore) ->
+define [
+  "express", 
+  "cs!config/config", 
+  "connect-redis"], (express, config, ConnectRedis) -> 
+    
+  initialize: (app) ->
     app.configure ->
       app.use(express.methodOverride())
       app.use(express.bodyParser())
@@ -22,6 +26,6 @@ define ["cs!config/config"], (config) ->
       app.use(
         express.session(
           secret: config.secret 
-          store: new RedisStore(db: config.db.test.name)
+          store: new RedisStore(db: config.db.production.name)
         )
       )
