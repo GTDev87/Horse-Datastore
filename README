@@ -12,6 +12,8 @@ Installing Modules:
 
   To install all project modules use:
     make setup
+  
+  Code in lib are unmanaged dependencies.  They need to be manually updated.
 
 Testing:
   To run unit tests:

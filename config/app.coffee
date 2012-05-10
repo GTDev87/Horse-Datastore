@@ -1,13 +1,13 @@
-require('../node_modules/requirejs/bin/r.js')
-
-express = require('express')
-RedisStore = require('connect-redis')(express)
-app = express.createServer()
-
-config = require('./config.coffee')
-
-require('./setup.coffee')(app, express, RedisStore)
-require('./routes.coffee')(app)
-require('../lib/server.coffee')
-
-app.listen(config.server.port)
+define [
+  "express", 
+  "connect-redis", 
+  "cs!config/config", 
+  "cs!config/setup", 
+  "cs!config/routes", 
+  "cs!src/server"],(express, ConnectRedis, config, setup, routes, server) ->
+    
+  RedisStore = new ConnectRedis(express)
+  app = express.createServer()
+  setup.initialize(app, express, RedisStore)
+  routes.initialize(app)
+  app.listen(config.server.port)

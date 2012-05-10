@@ -1,23 +1,28 @@
-currentEnv = process.env.NODE_ENV or 'production'
-exports.appName = "Horse Datastore"
-
-exports.env =
-  production: false
-  test: false
+define ->
+  currentEnv = process.env.NODE_ENV or 'production'
   
-exports.env[currentEnv] = true
+  env[currentEnv] = true
+  
+  config =
+    appName: "Horse Datastore"
 
-exports.log =
-  path: __dirname + "/log/app_#{currentEnv}.log"
+    env:
+      production: false
+      test: false
+  
+    log:
+      path: __dirname + "/log/app_#{currentEnv}.log"
 
-exports.server =
-  port: 8081
-  ip: '127.0.0.1'
+    server:
+      port: 8081
+      ip: '127.0.0.1'
     
-exports.db = 
-  secret: "secretkey"
+    db: 
+      secret: "secretkey"
   
-  production:
-    name: "horse_datastore"
-  test:
-    name: "horse_datastore_test"
+      production:
+        name: "horse_datastore"
+      test:
+        name: "horse_datastore_test"
+        
+  return config
