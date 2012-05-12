@@ -9,11 +9,6 @@ FOLDER = test
 COMPILER_LOCATION = ./node_modules/coffee-script/bin/coffee
 
 setup:
-	rm -rf ./r.js
-	curl -o CoffeeScript.js https://raw.github.com/jashkenas/coffee-script/master/extras/coffee-script.js
-	curl -o cs.js https://raw.github.com/jrburke/require-cs/latest/cs.js
-	curl -o csBuild.js https://raw.github.com/jrburke/require-cs/latest/csBuild.js
-	cp node_modules/requirejs/bin/r.js .
 	npm install
 
 test:
@@ -46,6 +41,6 @@ features:
 
 server:
 	NODE_ENV=production
-	$(COMPILER_LOCATION) ./config/main.coffee
+	node ./main.js
 
 .PHONY: test unit features unit-watch server setup
