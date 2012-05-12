@@ -1,10 +1,9 @@
 express = require "express" 
 config = require "../config"
-setup_server = require "./setup_server"
-routes = require "./routes"
-server = require "./server"
+{routes, server} = require "./startup"
+model = require("./model")
 
 app = express.createServer()
-setup_server.initialize(app)
+server.initialize(app, config, express)
 routes.initialize(app)
 app.listen(config.server.port)

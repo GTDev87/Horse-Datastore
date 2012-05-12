@@ -41,6 +41,6 @@ features:
 
 server:
 	NODE_ENV=production
-	node ./main.js
+	coffee ./main.coffee
 
 .PHONY: test unit features unit-watch server setup

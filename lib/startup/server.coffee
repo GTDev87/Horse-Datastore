@@ -1,8 +1,6 @@
-express = require "express" 
-config = require "../config" 
 ConnectRedis = "connect-redis"
     
-exports.initialize = (app) ->
+exports.initialize = (app, config, express) ->
   app.configure ->
     app.use(express.methodOverride())
     app.use(express.bodyParser())
