@@ -1,0 +1,24 @@
+dependencies: \
+  /Users/serverdev/Documents/Titanium\ Studio\ Workspace/WordAssociation/build/iphone/Classes/PlausibleDatabase/PLSqlitePreparedStatement.m \
+  /Users/serverdev/Documents/Titanium\ Studio\ Workspace/WordAssociation/build/iphone/Classes/PlausibleDatabase/PlausibleDatabase.h \
+  /Users/serverdev/Documents/Titanium\ Studio\ Workspace/WordAssociation/build/iphone/Classes/PlausibleDatabase/PLResultSet.h \
+  /Users/serverdev/Documents/Titanium\ Studio\ Workspace/WordAssociation/build/iphone/Classes/PlausibleDatabase/PLPreparedStatement.h \
+  /Users/serverdev/Documents/Titanium\ Studio\ Workspace/WordAssociation/build/iphone/Classes/PlausibleDatabase/PLDatabase.h \
+  /Users/serverdev/Documents/Titanium\ Studio\ Workspace/WordAssociation/build/iphone/Classes/PlausibleDatabase/PLSqliteDatabase.h \
+  /Users/serverdev/Documents/Titanium\ Studio\ Workspace/WordAssociation/build/iphone/Classes/PlausibleDatabase/PLSqlitePreparedStatement.h \
+  /Users/serverdev/Documents/Titanium\ Studio\ Workspace/WordAssociation/build/iphone/Classes/PlausibleDatabase/PLSqliteResultSet.h \
+  /Users/serverdev/Documents/Titanium\ Studio\ Workspace/WordAssociation/build/iphone/Classes/TiBlob.h \
+  /Users/serverdev/Documents/Titanium\ Studio\ Workspace/WordAssociation/build/iphone/Classes/TiProxy.h \
+  /Users/serverdev/Documents/Titanium\ Studio\ Workspace/WordAssociation/build/iphone/Classes/TiBase.h \
+  /Users/serverdev/Documents/Titanium\ Studio\ Workspace/WordAssociation/build/iphone/Classes/TiThreading.h \
+  /Users/serverdev/Documents/Titanium\ Studio\ Workspace/WordAssociation/build/iphone/Classes/TiPublicAPI.h \
+  /Users/serverdev/Documents/Titanium\ Studio\ Workspace/WordAssociation/build/iphone/Classes/TiEvaluator.h \
+  /Users/serverdev/Documents/Titanium\ Studio\ Workspace/WordAssociation/build/iphone/Classes/KrollContext.h \
+  /Users/serverdev/Documents/Titanium\ Studio\ Workspace/WordAssociation/build/iphone/headers/TiCore/TiCore.h \
+  headers/TiCore/Ti.h headers/TiCore/TiBase.h \
+  headers/TiCore/TiContextRef.h headers/TiCore/TiObjectRef.h \
+  headers/TiCore/TiValueRef.h headers/TiCore/WebKitAvailability.h \
+  headers/TiCore/TiStringRef.h headers/TiCore/TiStringRefCF.h \
+  /Users/serverdev/Documents/Titanium\ Studio\ Workspace/WordAssociation/build/iphone/headers/TiCore/TiContextRefPrivate.h \
+  /Users/serverdev/Documents/Titanium\ Studio\ Workspace/WordAssociation/build/iphone/Classes/KrollCallback.h \
+  /Users/serverdev/Documents/Titanium\ Studio\ Workspace/WordAssociation/build/iphone/Classes/KrollObject.h

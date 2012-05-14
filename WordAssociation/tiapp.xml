@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+    <property name="acs-oauth-secret-production" type="string">UbG92dH6k3tOTIAkVzGKk5NyuKzFUEZG</property>
+    <property name="acs-oauth-key-production" type="string">Ofmd4ocAx51JnDD4karVwG7PWaXUnVtg</property>
+    <property name="acs-api-key-production" type="string">VrJWDz8GP1h1afig0Fzg2WZBa0OsjDNX</property>
+    <property name="acs-oauth-secret-development" type="string">Rmm4vt7JmySzbyeNw2epeALvQYG4fbEJ</property>
+    <property name="acs-oauth-key-development" type="string">QGxE9lcX9rOhvFOPAOvx1Cv3mp8aP53L</property>
+    <property name="acs-api-key-development" type="string">6cbgmH4GxXLjmw2sy8Lx9CkTMRvILOac</property>
+    <deployment-targets>
+        <target device="mobileweb">true</target>
+        <target device="iphone">true</target>
+        <target device="ipad">true</target>
+        <target device="android">true</target>
+        <target device="blackberry">false</target>
+    </deployment-targets>
+    <sdk-version>2.0.1.GA2</sdk-version>
+    <id>com.wordassociation</id>
+    <name>WordAssociation</name>
+    <version>1.0</version>
+    <publisher>serverdev</publisher>
+    <url>http://wordassociation.com</url>
+    <description>not specified</description>
+    <copyright>2012 by serverdev</copyright>
+    <icon>appicon.png</icon>
+    <persistent-wifi>false</persistent-wifi>
+    <prerendered-icon>false</prerendered-icon>
+    <statusbar-style>default</statusbar-style>
+    <statusbar-hidden>false</statusbar-hidden>
+    <fullscreen>false</fullscreen>
+    <navbar-hidden>false</navbar-hidden>
+    <analytics>true</analytics>
+    <guid>5b7e986f-62d1-4c2a-814f-2ba609a65f2e</guid>
+    <iphone>
+        <orientations device="iphone">
+            <orientation>Ti.UI.PORTRAIT</orientation>
+            <orientation>Ti.UI.UPSIDE_PORTRAIT</orientation>
+            <orientation>Ti.UI.LANDSCAPE_LEFT</orientation>
+            <orientation>Ti.UI.LANDSCAPE_RIGHT</orientation>
+        </orientations>
+        <orientations device="ipad">
+            <orientation>Ti.UI.PORTRAIT</orientation>
+            <orientation>Ti.UI.UPSIDE_PORTRAIT</orientation>
+            <orientation>Ti.UI.LANDSCAPE_LEFT</orientation>
+            <orientation>Ti.UI.LANDSCAPE_RIGHT</orientation>
+        </orientations>
+    </iphone>
+    <android xmlns:android="http://schemas.android.com/apk/res/android"/>
+    <modules>
+        <module platform="commonjs" version="2.0.1">ti.cloud</module>
+    </modules>
+    <plugins>
+        <plugin version="1.0">ti_coffee_plugin</plugin>
+    </plugins>
+</ti:app>

@@ -1,4 +1,9 @@
-/node_modules/*
 .redcar
-.idea
-npm-debug.log
+HorseDatastore/node_modules/*
+HorseDatastore/.idea
+HorseDatastore/npm-debug.log
+
+WordAssociation/tmp
+WordAssociation/*.class
+WordAssociation/*.pyc
+WordAssociation/*.pyo

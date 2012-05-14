@@ -1,0 +1,4 @@
+/node_modules/*
+.redcar
+.idea
+npm-debug.log
