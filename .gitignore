@@ -7,3 +7,4 @@ WordAssociation/tmp
 WordAssociation/*.class
 WordAssociation/*.pyc
 WordAssociation/*.pyo
+WordAssociation/build/*

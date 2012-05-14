@@ -1,0 +1,5 @@
+The projects are split up within the folders
+
+The shared modules will be in folder shared modules at this level
+
+the config.coffee file will hold shared data between the projects
