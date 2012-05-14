@@ -12,3 +12,5 @@ Titanium is Copyright (c) 2009-2012 by Appcelerator, Inc. All Rights Reserved.
 
 Titanium is licensed under the Apache Public License (Version 2). Please
 see the LICENSE file for the full license.
+
+When loading to edit app from Titanium appcelerator, load from WordAssociation folder
