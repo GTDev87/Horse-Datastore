@@ -4,7 +4,7 @@ HorseDatastore/.idea
 HorseDatastore/npm-debug.log
 
 WordAssociation/tmp
-WordAssociation/*.class
-WordAssociation/*.pyc
-WordAssociation/*.pyo
+*.class
+*.pyc
+*.pyo
 WordAssociation/build/*
