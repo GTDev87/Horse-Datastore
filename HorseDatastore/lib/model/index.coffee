@@ -1,2 +1,2 @@
-require("./user")
-require("./word")
+User = require("./user")
+Word = require("./word")

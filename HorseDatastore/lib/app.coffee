@@ -1,16 +1,17 @@
 class App
-  express = require "express" 
+  express = require "express"
+  Resource = require('express-resource')
   model = require("./model")
   ConnectRedis = "connect-redis"
   config = require "../../config"
   
   constructor: () ->
     @app = express.createServer()
-    @startServer()
+    @configureServer()
     @createRoutes()
     @app.listen(config.server.port)
   
-  startServer: ->
+  configureServer: ->
     
     @app.configure =>
       @app.use(express.methodOverride())
@@ -39,7 +40,8 @@ class App
       )
 
   createRoutes: ->
-    @app.get '/', (req, res) ->
-      res.send 'hello world'
+    @app.resource("users", require("./controllers/user"))
+    @app.resource("words", require("./controllers/word"))
+    
       
 exports.App = new App()
