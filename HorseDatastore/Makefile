@@ -53,4 +53,7 @@ server:
 	NODE_ENV=production
 	coffee ./main.coffee
 
-.PHONY: test unit features unit-watch server setup
+db-server:
+	redis-server
+
+.PHONY: test unit features unit-watch server setup db-server
