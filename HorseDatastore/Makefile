@@ -1,12 +1,22 @@
-MOCHA = ./node_modules/.bin/mocha
-REPORTER = spec
+#compiler stuff
 COMPILE_TYPE = coffee
 COMPILER_MODULE = coffee-script
-UNIT_TESTS = test/*.$(COMPILE_TYPE)
-ACCEPTANCE_TESTS = features/*.$(COMPILE_TYPE)
-COFFEE_COMPILER = $(COMPILE_TYPE):$(COMPILER_MODULE)
-FOLDER = test
 COMPILER_LOCATION = ./node_modules/coffee-script/bin/coffee
+
+#Mocha
+MOCHA = ./node_modules/.bin/mocha
+REPORTER = spec
+COFFEE_COMPILER = $(COMPILE_TYPE):$(COMPILER_MODULE)
+
+#Test Folders
+FOLDER = test
+UNIT_FOLDER = test
+ACCEPTANCE_FOLDER = features
+
+#Tests to run
+TESTS = $(shell find $(FOLDER) -name "*.$(COMPILE_TYPE)")
+UNIT_TESTS = $(shell find $(UNIT_FOLDER) -name "*.$(COMPILE_TYPE)")
+ACCEPTANCE_TESTS = $(shell find $(ACCEPTANCE_FOLDER) -name "*.$(COMPILE_TYPE)")
 
 setup:
 	npm install
@@ -16,7 +26,7 @@ test:
 	$(MOCHA) \
 	--reporter $(REPORTER) \
 	--compilers $(COFFEE_COMPILER) \
-	./$(FOLDER)/*
+	$(TESTS)
 
 unit:
 	NODE_ENV=test

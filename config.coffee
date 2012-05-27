@@ -24,3 +24,5 @@ exports.db =
     name: "horse_datastore"
   test:
     name: "horse_datastore_test"
+    
+  host: "127.0.0.1"
