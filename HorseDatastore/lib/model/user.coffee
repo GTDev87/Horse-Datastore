@@ -1,5 +1,7 @@
-exports.initialize = (redisDB) ->
-  console.log("user initialized")
+redisDB = {}
+
+exports.initialize = (db) ->
+  redisDB = db
   
 class User
   

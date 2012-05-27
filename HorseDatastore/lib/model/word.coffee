@@ -1,5 +1,7 @@
-exports.initialize = (redisDB) ->
-  console.log("word initialized")
+redisDB = {}
+
+exports.initialize = (db) ->
+  redisDb = db
   
 class Word
   
