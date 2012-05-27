@@ -1,3 +1,5 @@
+Word = require("../model/word")
+
 exports.index = (req, res) ->
   res.send('words index')
 

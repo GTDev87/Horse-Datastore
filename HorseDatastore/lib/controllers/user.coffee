@@ -1,3 +1,5 @@
+User = require("../model/user")
+
 exports.index = (req, res) ->
   res.send('users index')
 
