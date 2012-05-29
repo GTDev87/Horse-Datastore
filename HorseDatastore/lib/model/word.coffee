@@ -8,5 +8,5 @@ class Word
     attributes = attributes || 0;
     @name = attributes.name || "";
     
-    
-exports.Word = new Word()
+exports.Word = (attributes) ->
+  new Word(attributes)

@@ -7,5 +7,6 @@ class User
   constructor: (attributes) ->
     attributes = attributes || 0;
     @name = attributes.name || "";
-    
-exports.User = new User()
+
+exports.User = (attributes) ->
+  new User(attributes)
