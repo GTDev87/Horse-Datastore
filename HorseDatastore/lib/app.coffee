@@ -47,5 +47,5 @@ class App
   createRoutes: ->
     @app.resource("users", require("./controllers/user"))
     @app.resource("words", require("./controllers/word"))
-
+    
 exports.App = new App()

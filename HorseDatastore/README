@@ -3,6 +3,7 @@ To Start Server:
 
 Practices:
   lets commit to two space tab for indentation
+  fields with underscores are "private" in the context of the module so don't modify outside of module
 
 Installing Modules:
   To install modules use: 
