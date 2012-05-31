@@ -1,6 +1,16 @@
-exports.initialize = (app, config) ->
+User = {}
+Word = {}
+
+exports.initialize = (app) ->
   redisDB = require("redis").createClient()
   redisDB.select(app.set('redisdb'))
   
-  require("./user").initialize(redisDB)
-  require("./word").initialize(redisDB)
+  User = require("./user")
+  Word = require("./word")
+  
+  User.initialize(redisDB)
+  Word.initialize(redisDB)
+  
+  exports.User = User
+  exports.Word = Word
+  exports.DB = redisDB

@@ -1,17 +1,16 @@
-require ("../helper")
+{App} = require ("../helper")
 
 describe 'words', ->
-  Word = require("../../lib/model/word")
+  Word = App.model.Word
   
-  it 'should hold name', ->
+  it 'should hold name', (done) ->
     word = Word.Word({name: "horse"})
     word.name.should.equal "horse"
+    done()
     
-  it 'should save name to database', ->
+  it 'should save name to database', (done)->
     saveWord = Word.Word({name: "horse"})
-    saveWord.save()
-    getWord = Word.get({name: "horse"})
-    
-    getWord.name.should.equal "horse"
-    
-  
+    saveWord.save (err, name) ->
+      Word.get name, (err, word) ->
+        word.name.should.equal "horse"
+        done()

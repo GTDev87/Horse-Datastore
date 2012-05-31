@@ -41,8 +41,8 @@ class App
       )
   
   createModel: ->
-    model = require("./model")
-    model.initialize(@app, config)
+    @model = require("./model")
+    @model.initialize(@app)
 
   createRoutes: ->
     @app.resource("users", require("./controllers/user"))
